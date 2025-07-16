@@ -28,6 +28,7 @@ namespace ParcialSeminarioTema1.UI
             try
             {
                 //_genero = _generoServicio.GetGenero();
+                //pruebaGIT
                 _libro = _libroServicio.GetLibros();
                 int cantidadLibros = _libroServicio.GetCantidad();
                 TxtRegistros.Text = cantidadLibros.ToString();
