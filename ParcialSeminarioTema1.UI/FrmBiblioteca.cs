@@ -29,7 +29,8 @@ namespace ParcialSeminarioTema1.UI
             {
                 //_genero = _generoServicio.GetGenero();
                 _libro = _libroServicio.GetLibros();
-                //TxtRegistros.Text =_libroServicio.GetCantidad();
+                int cantidadLibros = _libroServicio.GetCantidad();
+                TxtRegistros.Text = cantidadLibros.ToString();
                 MostrarDatosEnGrilla();
             }
             catch (Exception ex)
