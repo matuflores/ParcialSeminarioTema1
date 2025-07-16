@@ -18,7 +18,9 @@ namespace ParcialSeminarioTema1.UI
             AppServices.Inicializar();
             ILibroServicio libroServicio = AppServices.ServiceProvider
                 .GetRequiredService<ILibroServicio>();
-            Application.Run(new FrmBiblioteca(libroServicio));
+            IGeneroServicio generoServicio = AppServices.ServiceProvider
+                .GetRequiredService<IGeneroServicio>();
+            Application.Run(new FrmBiblioteca(libroServicio,generoServicio));
         }
     }
 }

@@ -37,5 +37,22 @@ namespace ParcialSeminarioTema1.Servicios.Servicios
             var libros = _libroRepositorio.GetLibros(generoId, textoFiltro);
             return _mapper.Map<List<LibroListDto>>(libros);
         }
+
+        public bool Guardar(Libro libro, out List<string> errores)
+        {
+            errores = new List<string>();
+            //if (_libroRepositorio.Existe(libro))
+            //{
+            //    errores.Add("Libro existente");
+            //    return false;
+            //}
+            if (libro.LibroId == 0)
+            {
+                _libroRepositorio.Agregar(libro);
+                return true;
+            }
+            //_libroRepositorio.Editar(libro);
+            return true;
+        }
     }
 }

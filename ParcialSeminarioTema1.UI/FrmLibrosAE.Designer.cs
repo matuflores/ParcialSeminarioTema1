@@ -50,60 +50,63 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(63, 51);
+            label1.Location = new Point(72, 68);
             label1.Name = "label1";
-            label1.Size = new Size(49, 15);
+            label1.Size = new Size(61, 20);
             label1.TabIndex = 0;
             label1.Text = "Código:";
             // 
             // TxtCodigo
             // 
-            TxtCodigo.Location = new Point(118, 48);
+            TxtCodigo.Location = new Point(135, 64);
+            TxtCodigo.Margin = new Padding(3, 4, 3, 4);
             TxtCodigo.Name = "TxtCodigo";
             TxtCodigo.ReadOnly = true;
-            TxtCodigo.Size = new Size(133, 23);
+            TxtCodigo.Size = new Size(151, 27);
             TxtCodigo.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(63, 90);
+            label2.Location = new Point(72, 120);
             label2.Name = "label2";
-            label2.Size = new Size(40, 15);
+            label2.Size = new Size(50, 20);
             label2.TabIndex = 0;
             label2.Text = "Título:";
             // 
             // TxtTitulo
             // 
-            TxtTitulo.Location = new Point(118, 87);
+            TxtTitulo.Location = new Point(135, 116);
+            TxtTitulo.Margin = new Padding(3, 4, 3, 4);
             TxtTitulo.MaxLength = 255;
             TxtTitulo.Name = "TxtTitulo";
-            TxtTitulo.Size = new Size(450, 23);
+            TxtTitulo.Size = new Size(514, 27);
             TxtTitulo.TabIndex = 1;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(63, 131);
+            label3.Location = new Point(72, 175);
             label3.Name = "label3";
-            label3.Size = new Size(53, 15);
+            label3.Size = new Size(66, 20);
             label3.TabIndex = 0;
             label3.Text = "Sinopsis:";
             // 
             // TxtSinopsis
             // 
-            TxtSinopsis.Location = new Point(118, 128);
+            TxtSinopsis.Location = new Point(135, 171);
+            TxtSinopsis.Margin = new Padding(3, 4, 3, 4);
             TxtSinopsis.Multiline = true;
             TxtSinopsis.Name = "TxtSinopsis";
-            TxtSinopsis.Size = new Size(450, 96);
+            TxtSinopsis.Size = new Size(514, 127);
             TxtSinopsis.TabIndex = 1;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(63, 256);
+            label4.Location = new Point(72, 341);
             label4.Name = "label4";
-            label4.Size = new Size(48, 15);
+            label4.Size = new Size(60, 20);
             label4.TabIndex = 0;
             label4.Text = "Género:";
             // 
@@ -111,28 +114,32 @@
             // 
             CboGeneros.DropDownStyle = ComboBoxStyle.DropDownList;
             CboGeneros.FormattingEnabled = true;
-            CboGeneros.Location = new Point(121, 252);
+            CboGeneros.Location = new Point(138, 336);
+            CboGeneros.Margin = new Padding(3, 4, 3, 4);
             CboGeneros.Name = "CboGeneros";
-            CboGeneros.Size = new Size(196, 23);
+            CboGeneros.Size = new Size(223, 28);
             CboGeneros.TabIndex = 2;
             // 
             // button1
             // 
             button1.Image = Properties.Resources.Aceptar;
-            button1.Location = new Point(72, 304);
+            button1.Location = new Point(82, 405);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(75, 55);
+            button1.Size = new Size(86, 73);
             button1.TabIndex = 3;
             button1.Text = "OK";
             button1.TextImageRelation = TextImageRelation.ImageAboveText;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
             button2.Image = Properties.Resources.Cancelar;
-            button2.Location = new Point(493, 304);
+            button2.Location = new Point(563, 405);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(75, 55);
+            button2.Size = new Size(86, 73);
             button2.TabIndex = 3;
             button2.Text = "Cancelar";
             button2.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -140,9 +147,9 @@
             // 
             // FrmLibrosAE
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(630, 386);
+            ClientSize = new Size(718, 504);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(CboGeneros);
@@ -153,11 +160,13 @@
             Controls.Add(label2);
             Controls.Add(TxtCodigo);
             Controls.Add(label1);
-            MaximumSize = new Size(646, 425);
-            MinimumSize = new Size(646, 425);
+            Margin = new Padding(3, 4, 3, 4);
+            MaximumSize = new Size(736, 551);
+            MinimumSize = new Size(736, 551);
             Name = "FrmLibrosAE";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmLibrosAE";
+            Load += FrmLibrosAE_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
