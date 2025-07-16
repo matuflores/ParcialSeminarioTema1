@@ -12,7 +12,7 @@ namespace ParcialSeminarioTema1.Entidades
         public string Titulo { get; set; } = null!;
         public string Sinopsis { get; set; }=null!;
         public int GeneroId { get; set; }
-
+        
         public Genero? Genero { get; set; }
 
     }

@@ -1,4 +1,7 @@
-﻿namespace ParcialSeminarioTema1.UI.Helpers
+﻿using ParcialSeminarioTema1.Entidades.DTOs.Genero;
+using ParcialSeminarioTema1.Entidades.DTOs.Libro;
+
+namespace ParcialSeminarioTema1.UI.Helpers
 {
     public static class GridHelper
     {
@@ -32,7 +35,16 @@
         {
             switch (obj)
             {
-
+                case GeneroListDto genero:
+                    r.Cells[0].Value = genero.GeneroId;
+                    r.Cells[1].Value = genero.NombreGenero;
+                    break;
+                case LibroListDto libro:
+                    r.Cells[0].Value = libro.LibroId;
+                    r.Cells[1].Value = libro.Titulo;
+                    //r.Cells[2].Value = provinciaEstado.PaisId;
+                    r.Cells[2].Value = libro.NombreGenero;
+                    break;
             }
 
             r.Tag = obj;
