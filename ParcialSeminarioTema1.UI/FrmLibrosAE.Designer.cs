@@ -144,6 +144,7 @@
             button2.Text = "Cancelar";
             button2.TextImageRelation = TextImageRelation.ImageAboveText;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // FrmLibrosAE
             // 
@@ -166,7 +167,6 @@
             Name = "FrmLibrosAE";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmLibrosAE";
-            Load += FrmLibrosAE_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();

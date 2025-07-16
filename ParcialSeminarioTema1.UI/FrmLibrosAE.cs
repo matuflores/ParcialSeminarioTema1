@@ -34,10 +34,6 @@ namespace ParcialSeminarioTema1.UI
                 _libro.Titulo = TxtTitulo.Text;
                 _libro.Sinopsis = TxtSinopsis.Text;
                 _libro.GeneroId = (int)CboGeneros.SelectedValue!;
-                //aca le paso el PAIS id, pero tengo que mostrar el nombre en la grilla
-
-
-                //_provinciaEstado.Pais=(Pais)cbPaisProvEst.SelectedItem!;
                 DialogResult = DialogResult.OK;
             }
         }
@@ -60,39 +56,20 @@ namespace ParcialSeminarioTema1.UI
             return valido;
         }
 
-        //protected override void OnLoad(EventArgs e)
-        //{
-        //    base.OnLoad(e);
-        //    CombosHelper.CargarComboGeneros(ref CboGeneros, _paisServicio);
-        //    if (_provinciaEstado is not null)
-        //    {
-        //        textBoxProvEst.Text = _provinciaEstado.NombreProvinciaEstado;
-
-        //        //Si no me aparece el pais correspondiente a la prov/est es porque el select
-        //        //no es el que corresponde, antes tenia SELECTEINDEX y no era correcto el pais que
-        //        //me cargaba el cbPaisProvEst
-        //        cbPaisProvEst.SelectedValue = _provinciaEstado.PaisId;
-        //    }
-        //}
-        //acaerror
-        private void FrmLibrosAE_Load(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
             CombosHelper.CargarComboGeneros(ref CboGeneros, _generoServicio);
-            //if (_generoServicio is not null)
-            //{
-            //    textBoxProvEst.Text = _provinciaEstado.NombreProvinciaEstado;
-
-            //    //Si no me aparece el pais correspondiente a la prov/est es porque el select
-            //    //no es el que corresponde, antes tenia SELECTEINDEX y no era correcto el pais que
-            //    //me cargaba el cbPaisProvEst
-            //    cbPaisProvEst.SelectedValue = _provinciaEstado.PaisId;
-            //}
         }
 
-        internal Libro? GetLibro()
+        public Libro? GetLibro()
         {
-            throw new NotImplementedException();
+            return _libro;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
         }
     }
 }
