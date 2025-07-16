@@ -27,6 +27,11 @@ namespace ParcialSeminarioTema1.Servicios.Servicios
             throw new NotImplementedException();
         }
 
+        public int GetCantidad()
+        {
+            return _libroRepositorio.GetCantidad();
+        }
+
         public List<LibroListDto> GetLibros(int? generoId = null, string? textoFiltro = null)
         {
             var libros = _libroRepositorio.GetLibros(generoId, textoFiltro);

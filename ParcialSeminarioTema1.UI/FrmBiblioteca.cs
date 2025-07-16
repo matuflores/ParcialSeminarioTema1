@@ -29,6 +29,7 @@ namespace ParcialSeminarioTema1.UI
             {
                 //_genero = _generoServicio.GetGenero();
                 _libro = _libroServicio.GetLibros();
+                //TxtRegistros.Text =_libroServicio.GetCantidad();
                 MostrarDatosEnGrilla();
             }
             catch (Exception ex)
@@ -51,5 +52,6 @@ namespace ParcialSeminarioTema1.UI
                 GridHelper.AgregarFila(r, dgvDatos);
             }
         }
+
     }
 }

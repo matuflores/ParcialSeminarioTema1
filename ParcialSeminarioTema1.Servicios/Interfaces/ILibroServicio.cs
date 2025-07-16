@@ -12,5 +12,7 @@ namespace ParcialSeminarioTema1.Servicios.Interfaces
     {
         Libro? GetById(int libroId);
         List<LibroListDto> GetLibros(int? generoId = null, string? textoFiltro = null);
+
+        int GetCantidad();
     }
 }
